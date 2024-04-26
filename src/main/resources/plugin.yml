@@ -1,0 +1,9 @@
+name: talkingstick
+version: 1.0
+author: Chilly_Willy
+main: me.chillywilly.Main
+depend: [voicechat, WorldGuard]
+api-version: 1.20
+commands:
+  talkingstick:
+    permission: talking_stick.admin

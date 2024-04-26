@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>talkingstick</artifactId>
+    <groupId>me.chillywilly</groupId>
+    <version>1.0-SNAPSHOT</version>
+	
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	
+<repositories>
+    <!-- This adds the Spigot Maven repository to the build -->
+    <repository>
+        <id>spigot-repo</id>
+        <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+    </repository>
+
+    <!-- adds voicechat maven repo to the build -->
+    <repository>
+        <id>maven-repo</id>
+        <url>https://maven.maxhenkel.de/repository/public</url>
+    </repository>
+
+    <repository>
+        <id>sk89q-repo</id>
+        <url>https://maven.enginehub.org/repo/</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <!--This adds the Spigot API artifact to the build -->
+    <dependency>
+           <groupId>org.spigotmc</groupId>
+           <artifactId>spigot-api</artifactId>
+           <version>1.20.1-R0.1-SNAPSHOT</version>
+           <scope>provided</scope>
+    </dependency>
+
+    <!-- Adds Voicechat API to the build-->
+    <dependency>
+        <groupId>de.maxhenkel.voicechat</groupId>
+        <artifactId>voicechat-api</artifactId>
+        <version>2.4.11</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.sk89q.worldguard</groupId>
+        <artifactId>worldguard-bukkit</artifactId>
+        <version>7.0.9</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
+        
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <configuration>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
